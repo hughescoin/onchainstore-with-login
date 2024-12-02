@@ -1,10 +1,10 @@
 import { createContext, useContext, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { OnchainStoreContextType } from '../types';
-import jacketImage from '../images/jacket.png';
-import airpodsImage from '../images/airpods.png';
-import mugImage from '../images/mug.png';
-import bottleImage from '../images/bottle.png';
+import starterPackImage from '../images/starterpack.webp';
+import jarImage from '../images/single-jar.webp';
+import mugImage from '../images/bee-mug.webp';
+import packs from '../images/packs.webp';
 import type { Product } from 'src/types';
 
 const emptyContext = {} as OnchainStoreContextType;
@@ -17,24 +17,29 @@ type OnchainStoreProviderReact = {
 };
 
 const products: Product[] = [
-  { id: 'product1', name: `'BUILDER' JACKET`, price: 0.04, image: jacketImage },
+  {
+    id: 'product1',
+    name: `Manuka Honey Starter Kit`,
+    price: 0.25,
+    image: starterPackImage,
+  },
   {
     id: 'product2',
-    name: `'DND, I'M BUILDING' AIRPODS`,
-    price: 0.01,
-    image: airpodsImage,
+    name: `Manuka Honey 500g`,
+    price: 0.1,
+    image: jarImage,
   },
   {
     id: 'product3',
-    name: `'CAFFEINATED TO BUILD' MUG`,
+    name: `"Bee Cool" MUG`,
     price: 0.02,
     image: mugImage,
   },
   {
     id: 'product4',
-    name: `'HYDRATED TO BUILD' BOTTLE`,
-    price: 0.01,
-    image: bottleImage,
+    name: `Manuka Honey Packets 7g ea.`,
+    price: 0.05,
+    image: packs,
   },
 ];
 
